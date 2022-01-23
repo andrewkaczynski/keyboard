@@ -1,3 +1,4 @@
+// Package keyboard - reads data from keyboard
 package keyboard
 
 import (
@@ -7,6 +8,8 @@ import (
 	"strings"
 )
 
+// GetFloat reads float number from user keyboard
+// Returns read number and information about failures
 func GetFloat() (float64, error) {
 	reader := bufio.NewReader(os.Stdin)
 	input, err := reader.ReadString('\n')
